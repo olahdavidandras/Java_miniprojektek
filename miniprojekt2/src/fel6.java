@@ -1,4 +1,7 @@
 public class fel6 {
+    /* lk= legkisebb szam
+    ln= legnagyobb szam
+     */
     public static void main(String[] args) {
         int[] tomb = new int[]{1, 232, 7, -12, 0, 23, 78, -1};
         if (tomb.length != 0) {

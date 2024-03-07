@@ -5,15 +5,15 @@ public class fel2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Kerek egy szot");
         String szo = scanner.nextLine();
-        String csillagszo = "";
+        String csillagSzo = "";
         for (int i = 0; i < szo.length(); i++) {
             if (szo.charAt(i) == 'a' || szo.charAt(i) == 'A') {
-                csillagszo += "*";
+                csillagSzo += "*";
             } else {
-                csillagszo += szo.charAt(i);
+                csillagSzo += szo.charAt(i);
             }
         }
-        System.out.println(csillagszo);
+        System.out.println(csillagSzo);
 
         scanner.close();
     }

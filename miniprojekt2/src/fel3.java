@@ -17,8 +17,8 @@ public class fel3 {
                 megoldas = megoldas + szo.charAt(i);
             }
         }
-        char[] veglegesmegoldas = megoldas.toCharArray();
-        Arrays.sort(veglegesmegoldas);
-        System.out.println(veglegesmegoldas);
+        char[] veglegesMegoldas = megoldas.toCharArray();
+        Arrays.sort(veglegesMegoldas);
+        System.out.println(veglegesMegoldas);
     }
 }
