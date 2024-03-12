@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class fel1 {
+public class Fel1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Kerek egy szot");

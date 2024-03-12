@@ -1,4 +1,4 @@
-public class fel8 {
+public class Fel8 {
     public static void main(String[] args) {
         int[] tomb = new int[]{78, 34, 1, 3, 90, 34, -1, -4, 6, 55, 20, -65};
         if (tomb.length != 0) {

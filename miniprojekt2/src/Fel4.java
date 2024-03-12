@@ -1,4 +1,4 @@
-public class fel4 {
+public class Fel4 {
     public static void main(String[] args) {
         String szo = "aaabbbcccdde";
         String megoldas = "";

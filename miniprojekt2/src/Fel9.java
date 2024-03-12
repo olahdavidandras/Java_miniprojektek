@@ -1,4 +1,4 @@
-public class fel9 {
+public class Fel9 {
     public static void main(String[] args) {
         int[][] matrix = new int[10][10];
         for (int i = 0; i < 10; i++) {

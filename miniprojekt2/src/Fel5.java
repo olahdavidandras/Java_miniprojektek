@@ -1,4 +1,4 @@
-public class fel5 {
+public class Fel5 {
     public static void main(String[] args) {
         String[] tomb = {"alma", "korte", "banan", "szolo", "avocado", "cipo"};
         if (tomb.length != 0) {

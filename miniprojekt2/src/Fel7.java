@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class fel7 {
+public class Fel7 {
     public static void main(String[] args) {
         String[] tomb = {"1", "1", "2", "2", "0", "3", "33", "3", "3", "1", "2"};
         List<String> megoldas = new ArrayList<>();

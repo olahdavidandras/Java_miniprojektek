@@ -1,4 +1,4 @@
-public class fel6 {
+public class Fel6 {
     /* lk= legkisebb szam
     ln= legnagyobb szam
      */

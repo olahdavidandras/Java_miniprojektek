@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class fel3 {
+public class Fel3 {
     public static void main(String[] args) {
         String szo = "ababbcdcaebc";
         String megoldas = "";
