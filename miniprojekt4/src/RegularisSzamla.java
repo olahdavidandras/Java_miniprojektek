@@ -1,11 +1,64 @@
-public class RegularisSzamla implements Bankszamla{
-    @Override
-    public double betesz() {
-        return 0;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class RegularisSzamla implements Bankszamla {
+
+    protected double egyenleg;
+    protected String tulNev;
+    protected int szamlaSzam;
+    protected static int kovSzamlaSzam = 1;
+    protected List<Tranzakcio> tranzakciok;
+
+    public RegularisSzamla(String tulNev) {
+        this.tulNev = tulNev;
+        this.szamlaSzam = ujSzamlaSzam();
+        this.egyenleg = 0.0;
+        this.tranzakciok = new ArrayList<>();
+    }
+
+    public static int ujSzamlaSzam() {
+        Random random = new Random();
+        return random.nextInt(1000000);
     }
 
     @Override
-    public double kivesz() {
-        return 0;
+    public double getEgyenleg() {
+        return egyenleg;
+    }
+
+    public static boolean isDouble(Object value) {
+        return value instanceof Double;
+    }
+
+    @Override
+    public void betesz(double osszeg) {
+        if (isDouble(osszeg) && osszeg > 0) {
+            egyenleg += osszeg;
+            Tranzakcio tranz = new Tranzakcio(TranzakcioTipus.DEPOSIT, osszeg);
+            tranzakciok.add(tranz);
+
+        } else {
+            throw new RuntimeException("Hibas osszeg!");
+        }
+    }
+
+    @Override
+    public void kivesz(double osszeg) {
+        if (isDouble(osszeg) && egyenleg >= osszeg) {
+            egyenleg -= osszeg;
+            Tranzakcio tranz = new Tranzakcio(TranzakcioTipus.WITHDRAW, osszeg);
+            tranzakciok.add(tranz);
+        } else {
+            throw new RuntimeException("Hibas osszeg!");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Szamla szam: " + szamlaSzam +
+                ", Tulajdonos neve: " + tulNev +
+                ", egyenlege: " + egyenleg +
+                ", tranzakciok: " + tranzakciok;
     }
 }

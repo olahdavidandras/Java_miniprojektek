@@ -19,6 +19,9 @@ public class Tranzakcio {
 
     @Override
     public String toString() {
-        return idopont.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
+        return "Tranzakcio tipusa: " + tranzTipus +
+                ", osszeg: " + osszeg +
+                ", idopont: " +
+                idopont.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
 }

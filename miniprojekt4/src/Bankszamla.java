@@ -1,4 +1,8 @@
 public interface Bankszamla {
-    public double betesz();
-    public  double kivesz();
+
+    public double getEgyenleg();
+
+    public void betesz(double osszeg);
+
+    public void kivesz(double osszeg);
 }
