@@ -19,21 +19,18 @@ public class RegularisSzamla implements Bankszamla {
 
     public static int ujSzamlaSzam() {
         Random random = new Random();
-        return random.nextInt(1000000);
+        return random.nextInt(1000000, 9999999);
     }
 
     @Override
     public double getEgyenleg() {
-        return egyenleg;
-    }
 
-    public static boolean isDouble(Object value) {
-        return value instanceof Double;
+        return egyenleg;
     }
 
     @Override
     public void betesz(double osszeg) {
-        if (isDouble(osszeg) && osszeg > 0) {
+        if (osszeg > 0) {
             egyenleg += osszeg;
             Tranzakcio tranz = new Tranzakcio(TranzakcioTipus.DEPOSIT, osszeg);
             tranzakciok.add(tranz);
@@ -43,9 +40,13 @@ public class RegularisSzamla implements Bankszamla {
         }
     }
 
+    public List<Tranzakcio> getTranzakciok() {
+        return tranzakciok;
+    }
+
     @Override
     public void kivesz(double osszeg) {
-        if (isDouble(osszeg) && egyenleg >= osszeg) {
+        if (egyenleg >= osszeg) {
             egyenleg -= osszeg;
             Tranzakcio tranz = new Tranzakcio(TranzakcioTipus.WITHDRAW, osszeg);
             tranzakciok.add(tranz);

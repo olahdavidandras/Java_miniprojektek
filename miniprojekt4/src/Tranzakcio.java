@@ -17,6 +17,10 @@ public class Tranzakcio {
         this.osszeg = osszeg;
     }
 
+    public TranzakcioTipus getTranzTipus() {
+        return tranzTipus;
+    }
+
     @Override
     public String toString() {
         return "Tranzakcio tipusa: " + tranzTipus +
@@ -24,4 +28,5 @@ public class Tranzakcio {
                 ", idopont: " +
                 idopont.format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"));
     }
+
 }
