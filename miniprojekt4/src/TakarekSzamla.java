@@ -3,11 +3,10 @@ import java.util.Objects;
 public class TakarekSzamla extends RegularisSzamla {
 
     protected double kamatRata;
-    protected double kamat;
 
-    public TakarekSzamla(String tulNev, double kamat) {
+    public TakarekSzamla(String tulNev, double kamatRata) {
         super(tulNev);
-        this.kamat = kamat;
+        this.kamatRata = kamatRata;
     }
 
     public void hozzaadKamat() {
